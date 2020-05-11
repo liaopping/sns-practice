@@ -5,7 +5,8 @@ class Tag < ApplicationRecord
   has_many :posts, through: :post_tag_relations, dependent: :destroy
 
   private
-    def delete_whitespace
-      self.name = name.strip
-    end
+
+  def delete_whitespace
+    self.name = name.strip
+  end
 end
