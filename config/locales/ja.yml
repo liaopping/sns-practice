@@ -18,6 +18,7 @@ ja:
       post:
         images: '画像'
         body: '本文'
+        tag: 'タグ'
       comment:
         body: 'コメント'
         user_id: 'ユーザー'

@@ -29,6 +29,10 @@
         .col-10
           = simple_format(@post.body)
       hr
+      / タグ一覧
+      - @post.tags.each do |tag|
+        .badge.badge-primary
+          = tag.name
       / コメント一覧
       = render 'comments/comments', comments: @comments
     hr.m-0
