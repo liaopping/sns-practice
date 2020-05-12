@@ -21,7 +21,7 @@ class PostsController < ApplicationController
       @post.save_posts(tag_list)
       redirect_to posts_path, success: '投稿しました'
     else
-      @tag_list = tag_list
+      @tag_list = params[:post][:tag]
       flash.now[:danger] = '投稿に失敗しました'
       render :new
     end
@@ -38,7 +38,7 @@ class PostsController < ApplicationController
       @post.save_posts(tag_list)
       redirect_to posts_path, success: '投稿を更新しました'
     else
-      @tag_list = tag_list
+      @tag_list = params[:post][:tag]
       flash.now[:danger] = '投稿の更新に失敗しました'
       render :edit
     end
