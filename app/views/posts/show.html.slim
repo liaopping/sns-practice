@@ -30,9 +30,9 @@
           = simple_format(@post.body)
       hr
       / タグ一覧
-      - @post.tags.each do |tag|
+      - @post.tags.distinct.each do |t|
         .badge.badge-primary
-          = tag.name
+          = t.name
       / コメント一覧
       = render 'comments/comments', comments: @comments
     hr.m-0

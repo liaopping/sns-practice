@@ -24,6 +24,6 @@
     .card-text
       = post.body
     hr
-    - post.tags.each do |t|
+    - post.tags.distinct.each do |t|
       .badge.badge-primary
         = t.name
