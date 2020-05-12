@@ -29,7 +29,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = current_user.posts.find(params[:id])
-    @tag_list = @post.tags.pluck(:name).join(',')
+    @tag_list = @post.tags.distinct.pluck(:name).join(',')
   end
 
   def update
