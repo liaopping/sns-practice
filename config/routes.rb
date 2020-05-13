@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   post 'login', to: 'user_sessions#create'
   delete 'logout', to: 'user_sessions#destroy'
 
+  get 'contacts', to: 'contacts#index'
+  post 'contacts', to: 'contacts#create'
+
   resources :users, only: %i[index new create show]
   resources :posts, shallow: true do
     collection do

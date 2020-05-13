@@ -25,6 +25,14 @@ ja:
         post_id: '投稿'
       message:
         body: 'メッセージ'
+  activemodel:
+    models:
+      contact: 'お問い合わせ'
+    attributes:
+      contact:
+        name: 'お名前'
+        email: 'メールアドレス'
+        body: 'お問い合わせ内容'
 
   attributes:
     created_at: '作成日時'
