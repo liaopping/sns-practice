@@ -1,5 +1,5 @@
 class ContactMailer < ApplicationMailer
-  default from: 'admin@example.com'
+  default from: 'instaclone@example.com'
 
   def received_email(contact)
     @contact = contact
@@ -16,5 +16,4 @@ class ContactMailer < ApplicationMailer
       subject: 'お問い合わせを受け付けました'
     )
   end
-
 end
